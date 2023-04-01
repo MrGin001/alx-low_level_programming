@@ -5,21 +5,25 @@
  * Return: str
  */
 
-char *leet(char *str)
+char *leet(char *s)
 {
-	int i;
-	int j;
+	int length, count;
+	char alphabets[] = "aAeEoOtTlL";
+	char numbers[] = "4433007711";
 
-	char *a = "aAeEoOtTlL";
-	char *b = "4433007711";
-
-	for (i = 0 ; str[i] != '\0' ; i++)
+	length = 0;
+	while (s[length] != '\0')
 	{
-		for (j = 0 ; a[j] != '\0' ; j++)
+		count = 0;
+		while (count < 10)
 		{
-			if (str[i] == a[i])
-			str[i] = b[i];
+			if (alphabets[count] == s[length])
+			{
+				s[length] = numbers[count];
+			}
+			count++;
 		}
+		length++;
 	}
-	return (str);
+	return (s);
 }
