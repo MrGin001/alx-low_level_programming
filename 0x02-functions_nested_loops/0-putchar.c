@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * main - input access for codes.
- * Retturn: always 0
+ * main - Input access for codes.
+ *
+ * Return: Always 0
  */
 
 int main(void)
